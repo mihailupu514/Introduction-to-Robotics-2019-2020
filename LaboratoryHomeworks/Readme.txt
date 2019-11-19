@@ -23,3 +23,15 @@ Red Led
 
 
 We use the passive buzzer to detect the knock . When the knock was registered , the led lights up and after 5 seconds , the active buzzer plays a note . 
+
+
+
+4 Digit 7 Segment Display 
+Requirements : 
+Connection Cable
+Jumper wires
+Joystick
+4 Digits 7 Segment Display 
+Arduino Uno
+
+Purpose :  We use the joystick to switch the values displayed . While the dp is blinking , swipe left/right to select the digit . To lock on the specific digit , press the sw button . While the dp state is high , swipe up/down to cycle between 0-9. To save the change , press sw once again .

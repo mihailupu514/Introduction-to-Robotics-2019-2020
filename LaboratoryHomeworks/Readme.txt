@@ -49,3 +49,4 @@ Breadboard
 Auxiliar Breadboard
 
 Purpose: We created a menu which included Start Game , Settings and Highscore . In the settings we can change the starting level (0-9) . Based on the level , the score increases . Once every 5s the level is incremented and the score is equal to level * 3 . After 10 seconds the game ends and the score is saved in the programmable read-only memory of the arduino (aka eeprom) . Even after resetting the setup , the highscore remains saved .
+Video Proof : https://drive.google.com/open?id=14Yqe1oIkHhEX2aH_3A1rkcjQ5RPyTsXn

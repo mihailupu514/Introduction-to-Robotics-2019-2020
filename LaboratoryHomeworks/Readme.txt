@@ -35,3 +35,17 @@ Joystick
 Arduino Uno
 
 Purpose :  We use the joystick to switch the values displayed . While the dp is blinking , swipe left/right to select the digit . To lock on the specific digit , press the sw button . While the dp state is high , swipe up/down to cycle between 0-9. To save the change , press sw once again .
+
+
+LCD Menu with joystick control
+Requirements : 
+Connection Cable
+Jumper wires
+Joystick
+Arduino Uno
+Potentiometer
+330 Ohm Resistor
+Breadboard
+Auxiliar Breadboard
+
+Purpose: We created a menu which included Start Game , Settings and Highscore . In the settings we can change the starting level (0-9) . Based on the level , the score increases . Once every 5s the level is incremented and the score is equal to level * 3 . After 10 seconds the game ends and the score is saved in the programmable read-only memory of the arduino (aka eeprom) . Even after resetting the setup , the highscore remains saved .

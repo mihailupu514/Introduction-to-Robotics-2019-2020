@@ -1,1 +1,30 @@
+Name of the project : Battlestar
+Description :-fixed shooter in which the player controls a spaceship by moving it horizontally across the bottom
+of the dot-matrix and firing at descending enemies. The aim is to defeat the incoming waves (or the final boss depending on the mission) 
+that move horizontally back and forth across the screen as they advance toward the bottom of the screen.
+Requirements : Arduino Uno / Nano
+Connection cable
+Jumper Wires
+Breadboard(s)
+2-4 buttons (functionality depending on the spaceship you own through progress in-game)
+Joystick (movement)
+Buzzer(Audio signal - weapons ready)
+4 - 8x8 dot matrices ( I intend to use 4 dot matrices in order to visualise better the difference between enemy types , bosses , available
+spaceships you can acquire & other future edits) - If it isn't against the scope of the project
+Led (Visual Signal - death , incoming boss , laser ready)
+Switch
+LCD Menu
+Max7219 Driver
+Game Specifications : The player defeats an enemy spaceship and earns points by shooting it with the weapons in the arsenal.
+As more enemies are defeated, their movement speed / health / dmg increases. Defeating all the enemies of the specific wave ,brings 
+another wave that is more difficult, a loop which can continue endlessly.This would be the endless mode.
+Besides the endless mode , there will be at least 3 different missions . Each mission will have a specific name which will be from the
+actual canon-lore of star wars . Each mission will be & feel unique: obstacles , enemies , boss fights with diff mechanics.
+The main menu will guide you through the possible settings you can adjust , Thus being the mode you want to play , the difficulty ,
+shop - here you can purchase custom parts for each ship , new spaceships , supplies & consumable materials ,
+LeaderBoard which stores name-score in eeprom , Credits , Instructions .
+The score will change depending on the enemy you defeat through the course of a battle . If it happens that you're struck by an enemy , 
+you shall lose one life . Depending on the difficulty / mission / shop  , you can acquire more lives.
+Besides having an excellent & bug-free game , my intention is to implement a bunch of animations . 
+"Design is intelligence made visible." -- Alina Wheeler
 

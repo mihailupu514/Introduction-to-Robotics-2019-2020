@@ -6,15 +6,15 @@ Requirements : Arduino Uno / Nano
 Connection cable
 Jumper Wires
 Breadboard(s)
-2-4 buttons (functionality depending on the spaceship you own through progress in-game)
+2-4 buttons (functionality depending on the spaceship you own through progress in-game) (not implemented)
 Joystick (movement)
-Buzzer(Audio signal - weapons ready)
+Buzzer(Audio signal - weapons ready) (not implemented)
 4 - 8x8 dot matrices ( I intend to use 4 dot matrices in order to visualise better the difference between enemy types , bosses , available
 spaceships you can acquire & other future edits) - If it isn't against the scope of the project
-Led (Visual Signal - death , incoming boss , laser ready)
+Led (Visual Signal - death , incoming boss , laser ready) (not implemented)
 Switch
 LCD Menu
-Max7219 Driver
+4 - Max7219 Driver (2 simple ones and 2 with the module)
 Game Specifications : The player defeats an enemy spaceship and earns points by shooting it with the weapons in the arsenal.
 As more enemies are defeated, their movement speed / health / dmg increases. Defeating all the enemies of the specific wave ,brings 
 another wave that is more difficult, a loop which can continue endlessly.This would be the endless mode.

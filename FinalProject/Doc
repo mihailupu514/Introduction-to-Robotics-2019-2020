@@ -1,1 +1,28 @@
-
+Section 1. Project Title and Overview
+ My project for the Introduction to Robotics Course 2019-2020 is essentially a hand gesture controlled car . Basically , as the name 
+suggests , it's a vehicle controlled by wearing a glove . Controls are as simple as left,right,forward,backward and stop . All is
+achieved by wrist movement.
+Section 2. Purpose and Need
+ Obviously the project is stricly for entertainment purposes . Without a doubt it is extremelly fun to goof around with the controls /
+movement of the car , just by waving your hand in the directions mentioned above .
+ The project is still in an early phase . It can definitely be developed in so many fields of expertise . Just the core idea of remote 
+ control by hand gestures can be possibly implemented in the prosthetics industry.
+Section 3. Implementation Method
+ -Design the chasis for the car ( length , width , material ) . Take into consideration every little aspect like weight of the material
+ malleability , strength and cost . 
+ -Determine which components you are going to use . Example: drivers , dc motors , arduino boards etc.
+ -From here on , the projects splits into 2 parts : The Receiver and The Transmitter .
+ -The transmitter will be the glove and the receiver will be the car . The transmitter wil contain a gyroscope which will measure the 
+ X and Y axis (for the time being) . Based on the measurements which we'll send via radio , we change the direction of the motors.
+ --Transmitter : For the glove , I have sewed the arduino uno board through the bonds . To the arduino , I have connected the gyroscope
+ which i've placed in the back of the hand . (It's important to position it extremelly well in order for the movements to feel natural)
+ Besides the gyroscope , I've also connected a radio module ( NRF24L01 + PA + LNA <-> NRF24L01 with antenna ) . Placement of the module
+ is not relevant . The range exceeds easily 100 m .
+ --Receiver : I started out by experimenting with the motor driver shields . ( You can either choose between l293d shield or l298n shield
+ - depends on how you want the layout to be ) . I strongly recommend the 293d as it offers a wider range of appliances . Example : 4 
+ motor drivers slots - via screw terminal compared to only 2(l298d) .It is easier to use thanks to the 2 drivers & shift register 
+ embedded in the shield.
+ --Furthermore , the DC Motors play a key role . IMPORTANT : 
+Section 6. Timeline
+Section 7. Requirements
+Section 8. Expected Outcomes

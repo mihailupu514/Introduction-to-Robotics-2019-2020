@@ -2,11 +2,13 @@ Section 1. Project Title and Overview
  My project for the Introduction to Robotics Course 2019-2020 is essentially a hand gesture controlled car . Basically , as the name 
 suggests , it's a vehicle controlled by wearing a glove . Controls are as simple as left,right,forward,backward and stop . All is
 achieved by wrist movement.
+
 Section 2. Purpose and Need
  Obviously the project is stricly for entertainment purposes . Without a doubt it is extremelly fun to goof around with the controls /
 movement of the car , just by waving your hand in the directions mentioned above .
  The project is still in an early phase . It can definitely be developed in so many fields of expertise . Just the core idea of remote 
  control by hand gestures can be possibly implemented in the prosthetics industry.
+ 
 Section 3. Implementation Method
  -Design the chasis for the car ( length , width , material ) . Take into consideration every little aspect like weight of the material
  malleability , strength and cost . 
@@ -22,7 +24,56 @@ Section 3. Implementation Method
  - depends on how you want the layout to be ) . I strongly recommend the 293d as it offers a wider range of appliances . Example : 4 
  motor drivers slots - via screw terminal compared to only 2(l298d) .It is easier to use thanks to the 2 drivers & shift register 
  embedded in the shield.
- --Furthermore , the DC Motors play a key role . IMPORTANT : 
-Section 6. Timeline
-Section 7. Requirements
-Section 8. Expected Outcomes
+ --Furthermore , the DC Motors play a key role . IMPORTANT : Choose them accordingly based on speed , traction and haulage (in my case
+ i decided to use the micro motor ga12-n20 with 10 mm long shaft and 42 mm rubber wheels ). After connecting them properly ,do not forget
+ to establish the radio connection . 
+ 
+Section 4. Radio Connection
+To establish the radio connection , you need to connect the wires to the proper pins of the Arduino . 
+The NRF24L01 module pins are:
+GND is the Ground Pin. It is usually marked by encasing the pin in a square so it can be used as a reference for identifying 
+the other pins.
+VCC supplies power for the module. This can be anywhere from 1.9 to 3.9 volts. You can connect it to 3.3V output from your Arduino.
+Remember connecting it to 5V pin will likely destroy your nRF24L01+ module!
+CE (Chip Enable) is an active-HIGH pin. When selected the nRF24L01 will either transmit or receive, depending upon which mode it is
+currently in.
+CSN (Chip Select Not) is an active-LOW pin and is normally kept HIGH. When this pin goes low, the nRF24L01 begins listening on
+its SPI port for data and processes it accordingly.
+SCK (Serial Clock) accepts clock pulses provided by the SPI bus Master.
+MOSI (Master Out Slave In) is SPI input to the nRF24L01.
+MISO (Master In Slave Out) is SPI output from the nRF24L01.
+IRQ is an interrupt pin that can alert the master when new data is available to process.(Connection not required)
+So , for the Arduino Mega the SPI pins are :	51(MOSI)	50(MISO)	52(SCK)
+For the Arduino Uno & Nano: 11(MOSI) 12(MISO) 13(SCK)
+
+Section 5. Requirements
+-Jumper Wires
+-Motor Driver Shield l293d
+-2 Arduino boards ( I used for the receiver an Arduino Mega2560 and for the transmitter an Arduino Uno ) - The setup can be easily done
+with 2 Arduino Nano if you decide to use 2 layers 1 oz HASL surface finish 1.6 mm Thickness Designed PCB board 
+-Wheels(6 * 42 mm Rubber Wheels) - depends on your layout
+-DC Motors ( 6 * Micro Motor Ga12-N20 with high reductor )
+-2 NRF24L01 + PA + LNA for the receiver and transmitter
+-Gy 521 Gyroscope
+-2 * 18650 li-ion battery (450mA Li-po battery)
+-2 * Battery Holder
+-Glove (any kind )
+-Chasis for the car ( Acrylic sheet , Hobbyglas or Plexiglas) - Material of choice
+
+Section 6. Libraries used
+Arduino Basic Spi library
+Wire
+NRF24L01 header file
+The TMRh20 RF24 library
+AFMotor - most recent one
+
+Section 7. Unforeseen Problems
+-The DC Motors can't overcome the weight of the car
+-The NRF24L01 module (the simple one ) may not work , even though you try 6 or 7 . Just stick around /w the PA+LNA one.(Thanks Ivona)
+-Properly connect the jumper wires to the screw terminals or the car will not work accordingly.
+-Use a charged battery powerful enough
+-Fix the motors in place (Screws preferably) . Hot Glue is an alternative but not for long term . 
+-Make sure to place the motors straight . Even the slightest tilt we'll make the car not follow the original course and will provide
+more friction , which means less speed & traction.
+-Use the proper libraries
+
